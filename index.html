@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width= device-width,initial-scale = 1.0" />
+    <title>Sketch</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="flexContainer">
+      <div class="title"><h1>Sketch</h1></div>
+      <div class="content">
+        <div class="board"></div>
+        <div class="buttons">
+          <button onclick="changeColor('black')">Black</button>
+          <button onclick="changeColor('gray')">Gray</button>
+          <button onclick="changeColor('rainbow')">Rainbow</button>
+          <button onclick="grid()">Grid</button>
+          <button onclick="changeColor('white')">Eraser</button>
+          <button onclick="reset()">Reset</button>
+        </div>
+        <div>
+          <input
+            type="text"
+            placeholder="Board size"
+            value="16"
+            id="sizeInput"
+          />
+          <button onclick="changeSize(input.value)">Enter Size</button>
+        </div>
+        <div class="error"><h4>value must be between 2 and 100</h4></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
